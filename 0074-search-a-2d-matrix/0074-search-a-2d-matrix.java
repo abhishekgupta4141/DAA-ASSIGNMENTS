@@ -4,15 +4,14 @@ class Solution {
             return false;
         }
         
-        int rows = matrix.length;
-        int cols = matrix[0].length;
+        int m = matrix.length;
+        int n = matrix[0].length;
         int left = 0;
-        int right = rows * cols - 1;
+        int right = m * n - 1;
         
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            
-            int midVal = matrix[mid / cols][mid % cols];
+            int midVal = matrix[mid / n][mid % n];
             
             if (midVal == target) {
                 return true;
