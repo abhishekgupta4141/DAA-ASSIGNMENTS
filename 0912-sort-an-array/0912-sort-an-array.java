@@ -26,7 +26,7 @@ class Solution {
         int i = left;
         int j = mid + 1;
         int k = left;
-
+        
         while (i <= mid && j <= right) {
             if (temp[i] <= temp[j]) {
                 nums[k++] = temp[i++];
@@ -34,13 +34,9 @@ class Solution {
                 nums[k++] = temp[j++];
             }
         }
-
+        
         while (i <= mid) {
             nums[k++] = temp[i++];
-        }
-
-        while (j <= right) {
-            nums[k++] = temp[j++];
         }
     }
 }
